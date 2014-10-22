@@ -1,0 +1,29 @@
+<html ng-app="myApp">
+<head>
+	<title>Instragame-Unit 1</title>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+	<script type="text/javascript" src="angular-animate.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div ng-controller="MyController">
+<img src="pics/logo.png"><br>
+	<div id="main" ng-submit="submit()">
+		<input ng-model="keyword" placeholder="Search Instagram" required autofocus>
+		<input type="submit" value="submit"></input>
+	</div>
+
+	<div nh-show="errorMessage">{{errorMessage}}</div>
+
+	<ul>
+		<li ng-repeat= "result in results">
+			<img ng-src="result.images">
+		</li>
+	</ul>
+
+</div> <!--end of div controller -->
+
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
