@@ -36,7 +36,7 @@ myApp.controller("MyController", function($scope, $http, $timeout){
 
 	                }).
 	                error(function() {
-	                    alert('error');
+	                    $scope.errorMessage="Sorry something wrong happened";
 	                });
 			} //end of if valid Form
 			
