@@ -28,9 +28,10 @@ myApp.controller("MyController", function($scope, $http, $timeout){
 	            }).success(function(response) {
 	                	//if the call is a success
 	                	if(response.meta.code===200){
-	                		if(response.data.length> 5){
+	                		if(response.data.length> 0){
 	                			$timeout(function() {$scope.results = response.data;}, 10);
 	                			$scope.searchMessage="You have" + response.data.length+ "pictures related " + $scope.keyword;
+	                			$scope.keyword=null;
 	                		}else{$scope.searchMessage="Sorry we couldnt find any pictures related to "+ $scope.keyword;}
 	                	}
 
@@ -44,6 +45,9 @@ myApp.controller("MyController", function($scope, $http, $timeout){
 
 });
 
+//still need to remove pics after you start typing in the search box again
+//add animation :/
+//why only 20pics
 
 
 

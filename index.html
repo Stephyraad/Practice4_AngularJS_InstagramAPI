@@ -19,9 +19,9 @@
 	<div ng-show="searchMessage">{{searchMessage}}</div>
 
 	<ul>
-		<li ng-repeat= "result in results">
+		<li  ng-repeat= "result in results">
 		    <a href="{{result.images.link}}" target="_blank">
-		    <img src="{{result.images.low_resolution.url}}"> </a>
+		    <img class="images" src="{{result.images.low_resolution.url}}"> </a>
 			
 		</li>
 	</ul>
